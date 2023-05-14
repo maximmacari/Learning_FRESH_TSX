@@ -64,7 +64,6 @@ export default function Page({ data }: PageProps<User | null>) {
   if (!data) {
     return <h1>User not found</h1>;
   }
-
   return (
     <div class="p-6">
       <h1 class="text-xl font-bold mb-4">User Profile</h1>
@@ -103,6 +102,18 @@ export default function Page({ data }: PageProps<User | null>) {
           <div class="mb-4">
             <span class="font-bold mr-2">Created At:</span>
             <span class="text-gray-700">{data.created_at}</span>
+          </div>
+          <div class="mb-4">
+            <span class="font-bold mr-2">Bio:</span>
+            <span class="text-gray-700">{data.bio}</span>
+          </div>
+          <div class="mb-4">
+            <span class="font-bold mr-2">Updated:</span>
+            <span class="text-gray-700">{data.updated_at}</span>
+          </div>
+          <div class="mb-4">
+            <span class="font-bold mr-2">Repos:</span>
+            <span class="text-gray-700">{data.repos_url}</span>
           </div>
         </div>
       </div>
